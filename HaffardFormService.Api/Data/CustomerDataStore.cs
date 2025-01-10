@@ -8,7 +8,7 @@ namespace HaffardFormService.Api.Data
         {
             new CustomerInfo {Id = "ManXyz001", AccountNumber = "1234567890", Industry = "Manufacturing", DynamicFields = new() { "Invoice Number", "Quantity", "Delivery Address" } },
             new CustomerInfo {Id = "EduXyz001", AccountNumber = "2345678901", Industry = "Education", DynamicFields = new() { "Matric Number", "Level", "Course" } },
-            new CustomerInfo {Id = "TelXyz001", AccountNumber = "3456789012", Industry = "Telecom", DynamicFields = new() { "GSM Number", "Network", "Residential Address" } }
+            new CustomerInfo {Id = "TelXyz001", AccountNumber = "3456789012", Industry = "Telcom", DynamicFields = new() { "GSM Number", "Network", "Residential Address" } }
         };
     }
 }
