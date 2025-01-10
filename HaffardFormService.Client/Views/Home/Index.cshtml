@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Dynamic Form";
+}
+
+<h2>Select Industry</h2>
+<select id="industryType" class="form-control">
+    <option value="">-- Select Industry --</option>
+    @foreach (var industry in Model)
+    {
+        <option value="@industry">@industry</option>
+    }
+</select>
+
+<button id="loadFields" class="btn btn-primary mt-3">Load Fields</button>
+
+<div id="formContainer" class="mt-4"></div>
+
+@section Scripts {
+    <script src="/js/site.js"></script>
+}
+
+
+@* <div class="text-center"> *@
+@*     <h1 class="display-4">Welcome</h1> *@
+@*     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+@* </div> *@
+@* <div class="container"> *@
+@*     <h1>>Haffard Bank Transaction Form</h1> *@
+@*     <label for="industryType">Select Industry:</label> *@
+@*     <select id="industryType"> *@
+@*         <option value="">-- Select Industry --</option> *@
+@*         <option value="Manufacturing">Manufacturing</option> *@
+@*         <option value="Education">Education</option> *@
+@*         <option value="Telecom">Telecom</option> *@
+@*     </select> *@
+@*     <button id="loadFields">Load Fields</button> *@
+@*     <div id="formContainer"> *@
+@*         <!-- Dynamic form fields will be appended here --> *@
+@*     </div> *@
+@* </div> *@
+
+
