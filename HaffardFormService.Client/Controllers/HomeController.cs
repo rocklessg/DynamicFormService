@@ -15,7 +15,7 @@ namespace HaffardFormService.Client.Controllers
         public IActionResult Index()
         {
             // Send a list of industries to the view (static for now).
-            var industries = new List<string> { "Manufacturing", "Education", "Telecom" };
+            var industries = new List<string> { "Manufacturing", "Education", "Telcom" };
             return View(industries);
         }
 
