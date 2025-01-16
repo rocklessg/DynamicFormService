@@ -13,7 +13,11 @@
 
 <button id="loadFields" class="btn btn-primary mt-3">Load Fields</button>
 
-<div id="formContainer" class="mt-4"></div>
+@* <div id="formContainer" class="mt-4"></div> *@
+<form id="dynamicForm" class="mt-4" method="post" action="/Home/SubmitFields">
+    <div id="formContainer"></div>
+    <button id="submitButton" type="submit" class="btn btn-success mt-3" style="display: none;">Submit</button>
+</form>
 
 @section Scripts {
     <script src="/js/site.js"></script>

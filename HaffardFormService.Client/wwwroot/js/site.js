@@ -5,9 +5,11 @@
 document.getElementById("loadFields").addEventListener("click", async () => {
     const industryType = document.getElementById("industryType").value;
     const formContainer = document.getElementById("formContainer");
+    const submitButton = document.getElementById("submitButton");
 
     if (!industryType) {
         formContainer.innerHTML = `<p style="color: red;">Please select an industry.</p>`;
+        submitButton.style.display = "none"; // Hide submit
         return;
     }
 
@@ -17,6 +19,7 @@ document.getElementById("loadFields").addEventListener("click", async () => {
 
         if (!data.success) {
             formContainer.innerHTML = `<p style="color: red;">${data.message}</p>`;
+            submitButton.style.display = "none"; 
             return;
         }
 
@@ -30,8 +33,10 @@ document.getElementById("loadFields").addEventListener("click", async () => {
             `;
             formContainer.appendChild(inputDiv);
         });
+        submitButton.style.display = "block"; // Show submit button
     } catch (error) {
         formContainer.innerHTML = `<p style="color: red;">An error occurred. Please try again later.</p>`;
+        submitButton.style.display = "none";
     }
 });
 
